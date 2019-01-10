@@ -1,11 +1,4 @@
-# mvvm
-
-数据监听原理
-
-```javascript
-
-  class Observer extends Object {
-    
+class Observer extends Object {
   constructor() {
     super();
     this.observers = {};
@@ -55,8 +48,6 @@
     }
   }
 
-  }
+}
 
-  export const observer = new Observer();
-
-```
+export const observer = new Observer();
