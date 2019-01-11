@@ -25,6 +25,9 @@ module.exports = {
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
       title: 'Webpack APP',
+      template: 'index.html',
+      favicon: false,
+      minify: false,
     })
   ],
 }
