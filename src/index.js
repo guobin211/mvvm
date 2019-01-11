@@ -2,6 +2,8 @@ import './index.css';
 import Button from './components/button';
 import Input from './components/input';
 import List from './components/list';
+import Canvas from './components/canvas';
+
 
 function bootstarp() {
   const element = document.createElement('div');
@@ -9,7 +11,7 @@ function bootstarp() {
   element.setAttribute("id", "app");
   element.innerHTML = title;
 
-  const nodes = [Input, Button, List]
+  const nodes = [Input, Button, List, Canvas]
   render(nodes, element);
 
   return element;

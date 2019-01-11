@@ -1,3 +1,5 @@
+import {renderCanvas} from './canvas';
+
 function button(){
   const element = document.createElement('button');
   element.setAttribute("type", "button");
@@ -5,7 +7,7 @@ function button(){
   element.style = "background: #78a5f1";
 
   element.onclick = function ($event) {
-    console.log($event);
+    renderCanvas('html-canvas');
   }
   
   return element;
