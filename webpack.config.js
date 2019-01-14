@@ -4,8 +4,12 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'production',
-  entry: './src/index.js',
+  entry: {
+    index: './src/index.js',
+    about: './src/about.js'
+  },
   output: {
+    publicPath: '/',
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
@@ -22,12 +26,18 @@ module.exports = {
     }]
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(['dist/*']),
     new HtmlWebpackPlugin({
       title: 'Webpack APP',
-      template: 'index.html',
+      template: './src/index.html',
       favicon: false,
       minify: false,
-    })
+    }),
+    new HtmlWebpackPlugin({
+      title: 'about',
+      template: './src/about.html',
+      favicon: false,
+      minify: false,
+    }),
   ],
 }
